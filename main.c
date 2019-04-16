@@ -17,8 +17,23 @@
  *  --> D'afficher la pile 1 et le resultat de la comparaison
  *      Entre les deux piles, si la pile 2 correspond au même
  *      ordre de dépilement de la pile 1(affiche oui) ou non.
+ *------------------------------------------------------------
+ *  <<<<<<<Guideline for english speakers>>>>>>
  *
+    This program was made for the purpose
+ *  check a precise order (from top to bottom)
+ *  unstacking elements of a stack ..
  *
+ *  The functions used in the hand allow:
+ *  --> Stack a string in a stack.
+ *
+ *  --> To stack a second string of characters in
+ *  Another stack that serves as a relative comparison
+ *  to stack 1 during unstacking.
+ *
+ *  --> To display the stack 1 and the result of the comparison
+ *  Between the two batteries, if the battery 2 corresponds to the same
+ *  Stacking order of stack 1 (displays yes) or not.
  * \param
  * \param
  * \return
@@ -30,35 +45,78 @@ int main()
 {
     Pile p=init();
     int choix;
+    int lang;
 
-    do
+    printf("1-Francais.\n");
+    printf("2-English\n");
+    printf("\tchoice:");
+    scanf("%d", &lang);
+
+    if(lang==1)
     {
-        menu();
-        printf("\tChoix:");
-        scanf("%d", &choix);
-        fflush(stdin);
-
-        switch(choix)
+        do
         {
-        case 1:
-            ret_phr(&p);
-            break;
-        case 2:
-            ver_phr(&p);
-            break;
-        case 3:
-            affichage(&p);
-            break;
-        case 4:
-            printf("-------------Fin du programme-----------\n");
-            break;
-        default :
-            printf("-------------Touche inconnue-----------\n\n");
-            break;
+            menuFrench();
+            printf("\tChoix:");
+            scanf("%d", &choix);
+            fflush(stdin);
+
+            switch(choix)
+            {
+            case 1:
+                ret_phr(&p);
+                break;
+            case 2:
+                ver_phr(&p);
+                break;
+            case 3:
+                affichage(&p);
+                break;
+            case 4:
+                printf("-------------Fin du programme-----------\n");
+                break;
+            default :
+                printf("-------------Touche inconnue-----------\n\n");
+                break;
+            }
+            fflush(stdin);
         }
-        fflush(stdin);
+        while(choix!=4);
+
     }
-    while(choix!=4);
+    else
+    {
+        do
+        {
+            menuEnglish();
+            printf("\tChoix:");
+            scanf("%d", &choix);
+            fflush(stdin);
+
+            switch(choix)
+            {
+            case 1:
+                ret_phr(&p);
+                break;
+            case 2:
+                ver_phr(&p);
+                break;
+            case 3:
+                affichage(&p);
+                break;
+            case 4:
+                printf("-------------Program ends-----------\n");
+                break;
+            default :
+                printf("-------------Unknown key-----------\n\n");
+                break;
+            }
+            fflush(stdin);
+        }
+        while(choix!=4);
+
+    }
+
 
     return 0;
 }

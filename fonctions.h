@@ -20,6 +20,7 @@ void verification1(Pile* p, char* phrase);
 void verification2(Pile* p,char* phrase);
 void sauvegarde(Pile* p, char* phrase);
 void comparaison(Pile* p, Pile* phrase_v);
-void menu();
+void menuFrench();
+void menuEnglish();
 
 #endif // FONCTIONS_H_INCLUDED

@@ -247,7 +247,7 @@ void comparaison(Pile* p, Pile* phrase_v)
 
 /*--------------------------------------------*/
 
-void menu()
+void menuFrench()
 {
     printf("///////////MENU/////////////////////\n");
     printf("1-Entrez la phrase originale       /\n");
@@ -256,5 +256,14 @@ void menu()
     printf("4-Quitter                          /\n");
     printf("///////////MENU/////////////////////\n");
 }
-
+/*--------------------------------------------*/
+void menuEnglish()
+{
+    printf("///////////MENU/////////////////////\n");
+    printf("1-Input the original phrase      /\n");
+    printf("2-Input the phrase to check      /\n");
+    printf("3-Display the stack                /\n");
+    printf("4-Quit                           /\n");
+    printf("///////////MENU/////////////////////\n");
+}
 /*--------------------------------------------*/
